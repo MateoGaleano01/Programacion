@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int ConvertirPesos(int cantidad) {
+    const float tipoDeCambio = 331.37;
+    int resultado = cantidad * tipoDeCambio;
+    return resultado;
+}
+
+int main() {
+    int cifra;
+    cout<<"introducir cifra de dolares a convertir"<<endl;
+    cin>>cifra;
+    int dolares = cifra;
+    int pesos = ConvertirPesos(dolares);
+    cout << dolares << " dolares son " << pesos << " pesos\n";
+    return 0;
+}
