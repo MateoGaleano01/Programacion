@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+float CalcularFahrenheit(int Celsius) {
+    float Fahrenheit = (Celsius * 1.8) + 32.0;
+    return Fahrenheit;
+}
+
+int main() {
+    int Celsius;
+    cout << "Ingrese una temperatura en grados Celsius: ";
+    cin >> Celsius;
+    float Fahrenheit = CalcularFahrenheit(Celsius);
+    cout << Celsius << " grados Celsius equivale a " << Fahrenheit << " grados Fahrenheit" << endl;
+    return 0;
+}
