@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+float CalcularSalario(int salario) {
+    float porcentaje, aumento, nuevoSalario;
+    
+    if (salario <= 400.00) {
+        porcentaje = 15.0;
+    } else if (salario <= 800.00) {
+        porcentaje = 12.0;
+    } else if (salario <= 1200.00) {
+        porcentaje = 10.0;
+    } else if (salario <= 2000.00) {
+        porcentaje = 7.0;
+    } else {
+        porcentaje = 4.0;
+    }
+    
+    aumento = salario * (porcentaje / 100.0);
+    nuevoSalario = salario + aumento;
+    
+    cout << "El salario anterior era: " << salario << endl;
+    cout << "El porcentaje de aumento es: " << porcentaje << "%" << std::endl;
+    cout << "El aumento salarial es: " << aumento << endl;
+    cout << "El nuevo salario es: " << nuevoSalario << endl;
+    
+    return nuevoSalario;
+}
+
+int main() {
+    int salario;
+    cout << "Ingrese el salario del empleado: ";
+    cin >> salario;
+    CalcularSalario(salario);
+    return 0;
+}
